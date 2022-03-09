@@ -22,7 +22,6 @@ void main(List<String> args) {
   
   print(pattern3.hasMatch(data));
 
-
   // checks if the String contains url or not
 
   var pattern4 = RegExp(r'(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-?=%.]+');
