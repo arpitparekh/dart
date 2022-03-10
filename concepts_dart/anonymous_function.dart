@@ -1,3 +1,13 @@
+
+// lambda function
+
+printMsg() => print("This is lambda function");
+
+int displayData() => 45;
+
+int min(int a,int b) => (a<b) ? a : b;
+
+
 void main(List<String> args) {
   
     // lambda
@@ -11,6 +21,9 @@ void main(List<String> args) {
         print(element);
     });
 
-    
+    printMsg();
+
+    print(displayData());
+    print(min(1, 100));
 
 }
