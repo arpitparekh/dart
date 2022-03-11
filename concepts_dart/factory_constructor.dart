@@ -2,7 +2,7 @@
 class Database{
 
 
-  /////////   /////////////  first way   ////////////////////
+  ///////////////////////////////  first way   /////////////////////////////
   
 
 //  Database(this.size,this.no_row,this.no_column);
@@ -90,11 +90,13 @@ factory Database(String database,var size,var no_row,var no_column){
    print("size : $size\nno of row : $no_row\nno of coliumn : $no_column");
  }
 
+ /////////////////////////////////////////////////////////////////////////////
+
 }
 void main(List<String> args) {
 
 
-    // do not do this in main function use factory constructor instead  //////////////////////////////////////////////
+    // don't do this    //////////////////////////////////////////////
 
     // String database = "mysql";
 
@@ -110,8 +112,14 @@ void main(List<String> args) {
     //   Database d = new Database.msSql(40, 56, 6);
     // }
 
+
+
      // make main function consice    ///////////////////////////////////////////////////////////////////
     
-    Database d = new Database("mysql");
+
+
+    // Database d = new Database("mysql");  // first way
+
+    Database d = new Database("mysql",50,13,5);
 
 }
