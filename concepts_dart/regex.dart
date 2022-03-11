@@ -27,5 +27,6 @@ void main(List<String> args) {
   var pattern4 = RegExp(r'(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-?=%.]+');
 
   print(pattern4.hasMatch(data));
+  
 
 }
