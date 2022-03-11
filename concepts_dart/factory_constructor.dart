@@ -56,6 +56,7 @@ factory Database(String database,var size,var no_row,var no_column){
     if(database=="mysql"){
 
       return new Database.mysql(size, no_row, no_column);
+
     }else if(database=="mongoDB"){
 
       return Database.mongoDB(size, no_row, no_column);
@@ -63,6 +64,7 @@ factory Database(String database,var size,var no_row,var no_column){
     }else if(database == "mssql"){
 
       return Database.msSql(size, no_row, no_column);
+      
     }else{
 
       throw ArgumentError("wrong argument");   // factory constructor does not return null
