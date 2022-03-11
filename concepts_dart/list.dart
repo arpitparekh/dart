@@ -133,8 +133,17 @@ void main() {
 
   //////////////////////////////////////////////////////
   
-
+  String data1 = "HEllo";
   
+  List<String> lt = data1.split('');
+
+  print(lt);
+  print(omg);
+
+  ////////////////////////////////////////////
+  
+  // no such method()
+
 
   
 
