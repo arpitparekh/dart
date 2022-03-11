@@ -1,8 +1,9 @@
+
 void main() {
 
   // var datas =  new List(34);  // depricated
 
-  var list = List.filled(6, "",growable: false);
+  var list = List.filled(6,"",growable: false);
 
   print(list);
 
