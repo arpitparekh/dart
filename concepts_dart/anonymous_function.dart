@@ -7,6 +7,8 @@ int displayData() => 45;
 
 int min(int a,int b) => (a<b) ? a : b;
 
+void findParameter(int length,int breadth) => print("parameter is ${2*(length+breadth)}");
+
 
 void main(List<String> args) {
   
