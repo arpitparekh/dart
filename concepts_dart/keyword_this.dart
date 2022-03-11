@@ -9,12 +9,13 @@ class Data{
 
   // minialize this with 
 
-  Data(this.a,this.b);   // parameterize constructor
+  Data(this.a,this.b);   // parameterize constructor 
 
   Data.another(int c) : this(10,20);   // redirective Constructor
 
   var a;
   var b;
+  var c;
 
   void displayData(){
 
