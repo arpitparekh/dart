@@ -76,6 +76,10 @@ void main() {
   faculty.add(false);
   faculty.add('c');
 
+  faculty.any((element) => element>5); // lambda method
+
+  // faculty.asMap();   // converts into map
+
   print(faculty);
 
   print(faculty.first);
@@ -100,7 +104,38 @@ void main() {
   var list7 = List.filled(5, 0,growable: true);
 
   print(list7);
+
+  ///////////////////////////////////////
   
 
+
+  List<num> list8 = [];
+
+  List<int> data = list8.cast();
+
+  print(data);
+
+  print(data.runtimeType);
+
+  ///////////////////////////////////////
+  
+  var omg = [1,2,3,4,5];
+
+  int result = omg.fold<int>(0, (previousValue, element) => previousValue+element);
+
+  print(result);
+
+  //////////////////////////////////////////////////
+  
+  var newOmg =  omg.followedBy([6,7,8]);
+
+  print(newOmg);
+
+  //////////////////////////////////////////////////////
+  
+
+  
+
+  
 
 }
