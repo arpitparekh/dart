@@ -10,11 +10,15 @@ class NGO{
 
   }
 
+  NGO.redirect() : this(13,5454);  // redirective constructor
+  NGO.redirect2(NGO obj) : this.copy(obj);
+
   NGO.copy(NGO obj){
 
     no_members = obj.no_members;
     helped_people = obj.helped_people;
   }
+  
 
   void display(){
 
@@ -32,5 +36,9 @@ void main(List<String> args) {
   NGO n1 = new NGO.copy(n);
 
   n1.display();
+
+  NGO n2 = new NGO.redirect();
+
+  n2.display();
 
 }
