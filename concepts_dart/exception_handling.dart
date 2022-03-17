@@ -1,3 +1,32 @@
+
+import 'dart:math';
+
+class AgeIsNotValidException implements Exception{
+  
+  String? error;
+
+  AgeIsNotValidException(this.error);
+
+}
+
+
+class Vote{
+
+  void checkAge(int age){
+    
+    if(age<18){
+
+      throw new AgeIsNotValidException("Age is Below 18");
+
+    }else{
+
+      print("Eligible");
+    }
+
+  }
+
+}
+
 void main(List<String> args) {
   
   // when normal flow of perogrm is distrupted
@@ -44,6 +73,20 @@ void main(List<String> args) {
 
     /////////////  on keyword is not working with DivisionByZeroException  ///////
     
+    //custom exception
+    
+    var v = Vote();
 
+    try{
+
+    v.checkAge(12);
+
+    }catch(e){
+
+      e as AgeIsNotValidException; // object casting
+      
+      print(e.error);
+
+    }
 
 }
