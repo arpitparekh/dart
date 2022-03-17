@@ -56,7 +56,7 @@ int Function() sub(int a,int b){
 }
 
 int mix(int Function(),int Function2()){
-
+d
     return Function()+Function2();
 
 }
