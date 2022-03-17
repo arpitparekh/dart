@@ -2,7 +2,7 @@
 
 ////////////////////  optional patrameters   //////////////////////////
 
-void displayData(String str,[String? str2]){    // []  optional parameter
+void displayData([String? str,String? str2]){    // []  optional parameter
 
   print("str1 is $str and str2 is $str2");
 
@@ -34,7 +34,7 @@ void main(List<String> args) {
   
     // optional positional parameter
 
-    displayData("dart");
+    displayData();
 
     showData();
 
