@@ -1,3 +1,4 @@
+
 class Comp{
 
   var ram_size;
@@ -20,6 +21,13 @@ class Comp{
   static void findPrice(){
 
     print("This is findPrice Method");
+    // show();  // static method does not call instance methods/
+  }
+
+  void show(){
+
+    findPrice();  // but we can all static function inside method
+
   }
 
 }
@@ -40,12 +48,10 @@ void main(List<String> args) {
 
   var c2 = Comp.another();
 
-  print(Comp.ssd_size);
+  print(Comp.ssd_size);  // static variable consume memory only once
 
   nothing(a:23);
 
-  Comp.findPrice();  // static methods
-
-
+  Comp.findPrice();  // static methods // static method does not call instance methods
 
 }

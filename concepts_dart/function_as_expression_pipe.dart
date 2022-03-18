@@ -1,5 +1,5 @@
 
-// lambda function
+// function as expression
 
 printMsg() => print("This is lambda function");
 
@@ -11,10 +11,7 @@ void findParameter(int length,int breadth) => print("parameter is ${2*(length+br
 
 
 void main(List<String> args) {
-  
-    // lambda
-    // anonymous
-    // closure
+
 
     var list = [12,13,14,15];
 
