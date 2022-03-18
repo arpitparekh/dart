@@ -1,9 +1,10 @@
 class Comp{
 
   var ram_size;
+  
   static var ssd_size;  // value is same in all the object  // access via class name only
 
-  static const  cpu_speed= 23.34;
+  static const cpu_speed= 23.34;
 
   Comp(var r,var s){
 
@@ -14,6 +15,11 @@ class Comp{
 
   Comp.another(){
 
+  }
+
+  static void findPrice(){
+
+    print("This is findPrice Method");
   }
 
 }
@@ -38,7 +44,7 @@ void main(List<String> args) {
 
   nothing(a:23);
 
-
+  Comp.findPrice();  // static methods
 
 
 
