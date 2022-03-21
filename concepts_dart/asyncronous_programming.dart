@@ -25,4 +25,8 @@ void main(List<String> args) async{
   getStringFromFunction();
 
 
+  // isolates
+  
+
+
 }
