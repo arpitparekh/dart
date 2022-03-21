@@ -1,3 +1,5 @@
+import 'dart:isolate';
+
 Future<void> getStringFromFunction() {
   print("get String from Function starts...");
     return Future.delayed(const Duration(seconds: 2),() => print('welcome to the future'));
@@ -7,6 +9,10 @@ Future<void> getMoreData(){
   print("Go more Data Function starts...");
   return Future.delayed(Duration(seconds: 1),()=>"getMoreData function").then((value) => print(value));
 
+}
+
+void message(String msg){
+  print("msg : $msg");
 }
 
 void main(List<String> args) async{
@@ -25,8 +31,14 @@ void main(List<String> args) async{
   getStringFromFunction();
 
 
-  // isolates
-  
+  // isolates   // parallel programming
 
+  Isolate.spawn(message, "Hello");
+  Isolate.spawn(message, "Hi");
+  Isolate.spawn(message, "Kem Cho");
+  Isolate.spawn(message, "Hola");
+
+  // spawn runs functions parallelly with rest of the program
+  
 
 }
