@@ -15,10 +15,39 @@ void message(String msg){
   print("msg : $msg");
 }
 
+Future<String> downloadFile(){
+
+
+  Future<String> result = Future.delayed(Duration(seconds: 6),(){
+    return "This is Future String";
+  });  // in future we will get string value
+  return result;
+}
+
+printFileContent() async{    
+
+  // Future<String> data = downloadFile();
+
+  String data = await downloadFile(); 
+
+  print(data);
+
+}
+
+priFileContent2(){
+  
+  Future<String> data = downloadFile();
+
+  data.then((value) => data);    // executes the statemet only when valid string came from 
+
+}
+
 void main(List<String> args) async{
   
   // futures, wait , async , then
   // asyncronous programming let your program complete while waiting for another operations to finish
+
+  // there is no backgroud thead in dart
 
   // fetching data over internet 
   // read and write data in database
@@ -39,6 +68,8 @@ void main(List<String> args) async{
   Isolate.spawn(message, "Hola");
 
   // spawn runs functions parallelly with rest of the program
+
+  printFileContent();
   
 
 }
