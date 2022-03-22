@@ -67,6 +67,8 @@ void main(List<String> args) async{
   Isolate.spawn(message, "Kem Cho");
   Isolate.spawn(message, "Hola");
 
+  print("Hello");
+
   // spawn runs functions parallelly with rest of the program
 
   printFileContent();
